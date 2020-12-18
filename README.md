@@ -53,7 +53,7 @@ and get QC report
 qa <- qa("full/path/FastqFolder", "fastq.gz")
 browseURL(report(qa))
 ```
-the above will generate report of the fastq files that can be retrieved by
+the above will generate report of the fastq files retrieved by
 ```{r}
 list.files(path = "full/path/FastqFolder",pattern = "fastq.gz")
 ```
@@ -82,7 +82,7 @@ seqW(fileList1=fl_1,fileList1=fl_2,genomeRefFile="./GCF_000001405.26_GRCh38_geno
 
 Please don't forget to specify `genomeRefFile` and `genomeAnnotFile` i.e. the path of "**Genomic FASTA (.fna)**" and "**Genomic GTF (.gtf)**" as any of the above examples for the first time when you run `seqW`.
 
-If you already index files located in the working dir, you can speed it up by setting `indexBasename="my_index"` to avoid regenerating index files like below. And this will make `seqW` function ignore whatever is assgned to `genomeRefFile`. 
+If you already have index files located in the working dir, you can speed it up by setting `indexBasename="my_index"` to avoid regenerating index files like below. And this will make `seqW` function ignore whatever is assgned to `genomeRefFile`. 
 
 ```{r}
 seqW(fileList1=fl_1,indexBasename="my_index",
@@ -97,7 +97,7 @@ Below shows a complete list of trim and filter parameters. Probably most can be 
 
 1. `endTrimThrs`
 
-hred score threshold of the end base below which the end base will be trimmed,default "?"
+Phred score threshold of the end base below which the end base will be trimmed,default "?"
 
 2. `endTrimThrsend`
 
