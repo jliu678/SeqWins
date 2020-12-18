@@ -5,6 +5,12 @@ SeqWins Vignette
 ### Installation
 
 ```{r init}
+# Install dependencies
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("ShortRead")
+BiocManager::install("Rsubread")
+# Install SeqWins
 devtools::install_github("yourusername/myfirstpackage")("jliu678/SeqWins")
 ```
 
