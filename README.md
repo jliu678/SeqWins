@@ -1,7 +1,15 @@
 
 SeqWins Vignette
 =============================
-output:  github_document
+
+### Installation
+
+```{r init}
+install.packages("remotes")
+remotes::install_github("jliu678/SeqWins")
+```
+
+
 
 
 ### Introduction
@@ -17,7 +25,7 @@ These gemonic data of the same species as with your fastq data are required to b
 
 If necessary untar the downloaded files as blow
 
-```{r init}
+```{r}
 untar("full/path/genome_assemblies_genome_fasta.tar",exdir = ".")
 untar("full/path/genome_assemblies_genome_gtf.tar",exdir = ".")
 ```
