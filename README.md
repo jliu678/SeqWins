@@ -5,8 +5,7 @@ SeqWins Vignette
 ### Installation
 
 ```{r init}
-install.packages("remotes")
-remotes::install_github("jliu678/SeqWins")
+devtools::install_github("yourusername/myfirstpackage")("jliu678/SeqWins")
 ```
 
 
