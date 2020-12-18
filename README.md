@@ -1,7 +1,8 @@
----
-title: "SeqWins Vignette"
+
+SeqWins Vignette
+=============================
 output:  github_document
----
+
 
 ### Introduction
 
