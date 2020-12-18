@@ -1,6 +1,6 @@
 ---
 title: "SeqWins Vignette"
-output: rmarkdown::html_vignette
+output  github_document
 vignette: >
   %\VignetteIndexEntry{Vignette}
   %\VignetteEngine{knitr::rmarkdown}
