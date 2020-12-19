@@ -5,9 +5,6 @@ tagline: An R Package Allowing Flexible Base Trimming and Complete Fastq Analysi
 description: SeqWins Vignette
 ---
 
-SeqWins Vignette
-=============================
-***
 ## Installation
 
 
@@ -34,7 +31,7 @@ SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure 
 ## Prepare genomic Fastq sequence and the corresonding GTF annotation
 
 These gemonic data of the same species as with your fastq data are required to build index when aligning reads and get feature counts, and can be download from NCBI assembly website, for example [the hg38 files](https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.26/) by clicking the top right "**Download Assembly**" button and selecting "**Genomic FASTA (.fna)**" and "**Genomic GTF (.gtf)**" sequentially on the resultant drop-down options.
-
+  
 If necessary untar the downloaded files as blow
 
 ```{r}
@@ -85,7 +82,7 @@ seqW(fileList1=fl_1,fileList1=fl_2,genomeRefFile="./GCF_000001405.26_GRCh38_geno
 ```
 
 Please don't forget to specify `genomeRefFile` and `genomeAnnotFile` i.e. the path of "**Genomic FASTA (.fna)**" and "**Genomic GTF (.gtf)**" as any of the above examples for the first time when you run `seqW`.
-
+  
 If you already have index files located in the working dir, you can speed it up by setting `indexBasename="my_index"` to avoid regenerating index files like below. And this will make `seqW` function ignore whatever is assgned to `genomeRefFile`. 
 
 ```{r}
