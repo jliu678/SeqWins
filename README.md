@@ -179,6 +179,16 @@ seqW(fileList1=fl,alignType ='rnaExon_Exon')#RNAseq aim at exon-exon junction
 seqW(fileList1=fl,alignType ='microRNA')#microRNAseq
 ```
 
+#### *set featureCount*
+
+If only gene counts are needed to be output, leave `useMetaFeatures` as default (simply don't mention it). Please note each row in the input "**Genomic GTF (.gtf)**" is a feature, and many features can belong to one gene while some features have no corresponding gene ID. You can see all fields that define a feature [here](https://mblab.wustl.edu/GTF22.html). Thus, if feature counts containing information of all the fields rather than gene counts are needed, specify `useMetaFeatures=F` as below, so that the output will give information like the number of reads mapped to "+" strand of chromosome "II" from "380" to "401".
+
+
+```{r}
+seqW(fileList1=fl,subReadThreads=3L,shortreadRAM=1e8,useMetaFeatures=F,
+                genomeRefFile="./GCF_000001405.26_GRCh38_genomic.fna.gz",
+                genomeAnnotFile="./GCF_000001405.39_GRCh38.p13_genomic.gtf.gz")
+```
 
 ***
 ### Even more flexibility is faciliated!
