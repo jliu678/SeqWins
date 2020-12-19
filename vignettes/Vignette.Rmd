@@ -14,11 +14,27 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+***
+
 ### Introduction
 
 SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure Windows system flexible base-level (ATCG) quality control and convenient high-level whole-process analysis of fastq data-- spanning quality control report, trimming bases and reads accordingly, alignment and feature count. Till now, words still prevail that Fastq data cannot be elegantly processed in Windows. However, the fundamental low-level R package [ShortRead](https://bioconductor.org/packages/ShortRead/) and [Rsubread](https://bioconductor.org/packages/Rsubread/) has been available for long, based on which SeqWins is build up as complementary to other useful R packages, like [QuasR](https://bioconductor.org/packages/QuasR/) etc. Hope you'd find SeqWins useful and saving you from struggling for days to set up system environment and try various tools seemingly compatible with you daily Windows work station like I did when carrying out relevant tasks.
 
 
+
+### Keywords
+
+  + SeqWins
+  + Fastq
+  + Windows system
+  + R
+  + Trim base quality
+  + Filter reads
+  + RNAseq
+  + Quality control report
+  + DNAseq
+  + CHIPseq
+  
 ***
 
 ### Prepare genomic Fastq sequence and the corresonding GTF annotation
@@ -27,10 +43,11 @@ These gemonic data of the same species as with your fastq data are required to b
 
 If necessary untar the downloaded files as blow
 
-```{r init}
+```{r}
 untar("full/path/genome_assemblies_genome_fasta.tar",exdir = ".")
 untar("full/path/genome_assemblies_genome_gtf.tar",exdir = ".")
 ```
+
 
 ### QC report
 
@@ -47,11 +64,12 @@ and get QC report
 qa <- qa("full/path/FastqFolder", "fastq.gz")
 browseURL(report(qa))
 ```
-the above will generate report of the fastq files that can be retrieved by
+the above will generate report of the fastq files retrieved by
 ```{r}
 list.files(path = "full/path/FastqFolder",pattern = "fastq.gz")
 ```
 
+***
 
 ### Trim bases,filter reads,align and count feature
 
@@ -76,7 +94,7 @@ seqW(fileList1=fl_1,fileList1=fl_2,genomeRefFile="./GCF_000001405.26_GRCh38_geno
 
 Please don't forget to specify `genomeRefFile` and `genomeAnnotFile` i.e. the path of "**Genomic FASTA (.fna)**" and "**Genomic GTF (.gtf)**" as any of the above examples for the first time when you run `seqW`.
 
-If you already index files located in the working dir, you can speed it up by setting `indexBasename="my_index"` to avoid regenerating index files like below. And this will make `seqW` function ignore whatever is assgned to `genomeRefFile`. 
+If you already have index files located in the working dir, you can speed it up by setting `indexBasename="my_index"` to avoid regenerating index files like below. And this will make `seqW` function ignore whatever is assgned to `genomeRefFile`. 
 
 ```{r}
 seqW(fileList1=fl_1,indexBasename="my_index",
@@ -91,7 +109,7 @@ Below shows a complete list of trim and filter parameters. Probably most can be 
 
 1. `endTrimThrs`
 
-hred score threshold of the end base below which the end base will be trimmed,default "?"
+Phred score threshold of the end base below which the end base will be trimmed,default "?"
 
 2. `endTrimThrsend`
 
@@ -155,8 +173,18 @@ seqW(fileList1=fl,alignType ='rnaExon_Exon')#RNAseq aim at exon-exon junction
 seqW(fileList1=fl,alignType ='microRNA')#microRNAseq
 ```
 
+#### *set featureCount*
+
+If only gene counts are needed to be output, leave `useMetaFeatures` as default (simply don't mention it). Please note each row in the input "**Genomic GTF (.gtf)**" is a feature, and many features can belong to one gene while some features have no corresponding gene ID. You can see all fields that define a feature [here](https://mblab.wustl.edu/GTF22.html). Thus, if feature counts containing information of all the fields rather than gene counts are needed, specify `useMetaFeatures=F` as below, so that the output will give information like the number of reads mapped to "+" strand of chromosome "II" from "380" to "401".
 
 
+```{r}
+seqW(fileList1=fl,subReadThreads=3L,shortreadRAM=1e8,useMetaFeatures=F,
+                genomeRefFile="./GCF_000001405.26_GRCh38_genomic.fna.gz",
+                genomeAnnotFile="./GCF_000001405.39_GRCh38.p13_genomic.gtf.gz")
+```
+
+***
 ### Even more flexibility is faciliated!
 
 Hope the package can realize easy but deep appreciation of your fastq data, and you probably have found every parameters you wanna touch through above introduction. But there is even more! `...` arguments enable `seqW` function to access all the arguments in the classic functions wrapped inside it, including 
@@ -199,5 +227,6 @@ simply `?trimEnds` for example, to see their function and how to use it as brick
 
 The above steps are carried out by `Rsubread::buildindex`, `TrimAndFilter`, `Rsubread::align` or its variant and `Rsubread::featureCounts`, respectively. We have earlier discussed how to use `seqW` funciton avoid repeating generation of index files when there are already index files. Besides, if satisfactory trimmed fastq exist, simply sequentially call necessary functions listed above to achieve your goal, e.g. building index by `Rsubread::buildindex` then aligning and count features by  `Rsubread::align` and `Rsubread::featureCounts`. If you even have aligned bam, just run `Rsubread::buildindex` and `Rsubread::featureCounts`. If you have got feature counts at hand, well, thank you a lot for using or visiting this package.  
 
+Also see [html vignetts](https://jliu678.github.io/SeqWins/)
 
 
