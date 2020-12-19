@@ -109,39 +109,40 @@ Below shows a complete list of trim and filter parameters. Probably most can be 
 
 3. `adpter1Seq`,`adpter2Seq` 
 
-  > adapter sequence to be trimmed from end and also inner part of the read
+    : adapter sequence to be trimmed from end and also inner part of the read
 
-+ default `adpter1Seq` "AGATCGGAAGAGCACACGTCTGAACTCCAGTCA" i.e. illumina HT4000 adapter for read 1
+    + default `adpter1Seq` "AGATCGGAAGAGCACACGTCTGAACTCCAGTCA" i.e. illumina HT4000 adapter for read 1
 
-+ default `adpter2Seq` "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT" i.e. illumina HT4000 adapter for read 2
+    + default `adpter2Seq` "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT" i.e. illumina HT4000 adapter for read 2
 
 4. `with.Lindels`,`with.Rindels`
 
-True if your reads contain indels on left end (5',corresponding to `with.Lindels`) or right end (3',corresponding to `with.Rindels`), default False
+    : True if your reads contain indels on left end (5',corresponding to `with.Lindels`) or right end (3',corresponding to `with.Rindels`), default False
 
 5. `widthThrs`
 
-width threshold of reads to be filtered out,default 14L
+    : width threshold of reads to be filtered out,default 14L
 
 6. `cmplxThrs`
 
-complexity threshold of reads to be filtered out,default 0.5 i.e. half of mean complexity of human genome
+    : complexity threshold of reads to be filtered out,default 0.5 i.e. half of mean complexity of human genome
 
 7. `innerNThrs`
 
-number of N inside the read below which the read will be removed,default 2L
+    : number of N inside the read below which the read will be removed,default 2L
 
-+ `innerS`
+    + `innerS`
 
-  which base should be considered the start of inside part of the read after the above trimming,default 4L
+       : which base should be considered the start of inside part of the read after the above trimming,default 4L
 
-+ `innerE`
+    + `innerE`
 
-  which base should be considered the end of inside part of the read after the above trimming. Negative integer X for width(read)-abs(X) default -4L; positive integer X for Xth base
+       : which base should be considered the end of inside part of the read after the above trimming. Negative integer X for width(read)-abs(X) default -4L; positive integer X for Xth base
 
 ### *summary of trimming and filtration*
 
 A list containing dataframes of which each reports the result of trimming and filtration will be returned by the `seqw` function. You can assign the list to an object for further observation.
+
 ```{r}
 reportList<-seqW(fileList1=fl_1,fileList1=fl_2,genomeRefFile="./GCF_000001405.26_GRCh38_genomic.fna.gz",
                 genomeAnnotFile="./GCF_000001405.39_GRCh38.p13_genomic.gtf.gz")#RNAseq
@@ -158,6 +159,7 @@ seqW(fileList1=fl,subReadThreads=3L,shortreadRAM=1e8,
 ```
 
 For DNAseq, longDNAseq, RNAseq aim at exon-exon junction and microRNAseq, set `alignType` as '`dna`','`dnaLong`','`rnaExon_Exon`'and '`microRNA`' respectively--
+
 ```{r}
 seqW(fileList1=fl,alignType ='dna')#DNAseq
 seqW(fileList1=fl,alignType ='dnaLong')#longDNAseq
