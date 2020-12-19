@@ -38,6 +38,8 @@ SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure 
   + Filter reads
   + RNAseq
   + Quality control report
+  + DNAseq
+  + CHIPseq
   
 ***
 
