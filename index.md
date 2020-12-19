@@ -28,6 +28,19 @@ SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure 
 
 ***
 
+## Keywords
+
+  + SeqWins
+  + Fastq
+  + Windows
+  + R
+  + Trim base
+  + Filter reads
+  + RNAseq
+  + Quality control
+
+***
+
 ## Prepare genomic Fastq sequence and the corresonding GTF annotation
 
 These gemonic data of the same species as with your fastq data are required to build index when aligning reads and get feature counts, and can be download from NCBI assembly website, for example [the hg38 files](https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.26/) by clicking the top right "**Download Assembly**" button and selecting "**Genomic FASTA (.fna)**" and "**Genomic GTF (.gtf)**" sequentially on the resultant drop-down options.
@@ -170,10 +183,10 @@ seqW(fileList1=fl,alignType ='microRNA')#microRNAseq
 
 Hope the package can realize easy but deep appreciation of your fastq data, and you probably have found every parameters you wanna touch through above introduction. But there is even more! `...` arguments enable `seqW` function to access all the arguments in the classic functions wrapped inside it, including 
 
-1. `Rsubread::align`, called when `alignType="dna"` ,`"rna"` ,`"microRNA"`
-2. `Rsubread::sublong`, called when `alignType="longDNA"`
-3. `Rsubread::subjunc`, called when `alignType="rnaExon_Exon"`
-4. `Rsubread::featureCounts`, called every time `seqW` runs
+  1. `Rsubread::align`, called when `alignType="dna"` ,`"rna"` ,`"microRNA"`
+  2. `Rsubread::sublong`, called when `alignType="longDNA"`
+  3. `Rsubread::subjunc`, called when `alignType="rnaExon_Exon"`
+  4. `Rsubread::featureCounts`, called every time `seqW` runs
 (
 thus simply add their parameters (see what they have by `?Rsubread::featureCounts` or [Rsubread vignettes](https://bioconductor.org/packages/release/bioc/vignettes/Rsubread/inst/doc/SubreadUsersGuide.pdf)) when calling `seqW`, e.g.
 
@@ -185,14 +198,14 @@ seqW(minFragLength=40L,fileList1=fl,genomeRefFile="./GCF_000001405.26_GRCh38_gen
 ### *all are exported to facilitate your own pipeline*
 You might even wanna add/alter the trimming and filtration pipeline; No problem! I have exported every units wrapped under the top-level function, including 
 
-1. `trimEnds`
-2. `trimTailw`
-3. `trimAdapter`
-4. `filterWidth`
-5. `filterLowQuality`
-6. `ShortRead::nFilter`
-7. `filterLowComplexity`
-8. `filterInnerN`
+  1. `trimEnds`
+  2. `trimTailw`
+  3. `trimAdapter`
+  4. `filterWidth`
+  5. `filterLowQuality`
+  6. `ShortRead::nFilter`
+  7. `filterLowComplexity`
+  8. `filterInnerN`
 
 simply `?trimEnds` for example, to see their function and how to use it as bricks to make your own trimming and filter flow. And then use aforementioned `Rsubread` functions to complete alignment and feature count.
 
