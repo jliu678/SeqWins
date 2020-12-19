@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SeqWins
-tagline: An R Package allowing flexible base trimming and complete Fastq analysis on Windows System
+tagline: An R Package Allowing Flexible Base Trimming and Complete Fastq Analysis on Windows System
 description: SeqWins Vignette
 ---
 
