@@ -101,11 +101,11 @@ Below shows a complete list of trim and filter parameters. Probably most can be 
 
 1. `endTrimThrs`
 
-    > Phred score threshold of the end base below which the end base will be trimmed,default "?"
+    : Phred score threshold of the end base below which the end base will be trimmed,default "?"
 
 2. `endTrimThrsend`
 
-> mean Phred score threshold of five bases in ends,below which the five bases will be trimmed,default "4"
+    : mean Phred score threshold of five bases in ends,below which the five bases will be trimmed,default "4"
 
 3. `adpter1Seq`,`adpter2Seq` 
 
