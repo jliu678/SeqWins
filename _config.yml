@@ -18,7 +18,7 @@ author :
 
 # NOTE: Edit the production_url line by replacing kbroman with your github user name, 
 # and replace simple_site with the name that your repository will have on github.
-production_url : https://jliu678.github.io/SeqWinsIntroduction
+production_url : https://jliu678.github.io/SeqWins
 
 # Tell Github to use the kramdown markdown interpreter
 # (see https://help.github.com/articles/migrating-your-pages-site-from-maruku)
@@ -53,7 +53,7 @@ JB :
   #     This means always setting the protocol (http|https) or prefixing with "/"
   #
   # NOTE: Replace this next line with your own URL, likely with username.github.io
-  BASE_PATH : https://jliu678.github.io/SeqWinsIntroduction
+  BASE_PATH : https://jliu678.github.io/SeqWins
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
