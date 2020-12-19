@@ -101,15 +101,15 @@ Below shows a complete list of trim and filter parameters. Probably most can be 
 
 1. `endTrimThrs`
 
-Phred score threshold of the end base below which the end base will be trimmed,default "?"
+    > Phred score threshold of the end base below which the end base will be trimmed,default "?"
 
 2. `endTrimThrsend`
 
-mean Phred score threshold of five bases in ends,below which the five bases will be trimmed,default "4"
+> mean Phred score threshold of five bases in ends,below which the five bases will be trimmed,default "4"
 
 3. `adpter1Seq`,`adpter2Seq` 
 
-adapter sequence to be trimmed from end and also inner part of the read
+  > adapter sequence to be trimmed from end and also inner part of the read
 
 + default `adpter1Seq` "AGATCGGAAGAGCACACGTCTGAACTCCAGTCA" i.e. illumina HT4000 adapter for read 1
 
