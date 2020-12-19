@@ -1,18 +1,3 @@
-## Simple site: Easy websites with GitHub pages
+## SeqWins: An R Package allowing flexible base trimming and complete Fastq analysis on Windows System
 
-[Github Pages](https://pages.github.com) provide a simple way to make a
-website using Markdown and git.
-
-This is a minimal tutorial to get started.
-
-View the thing [here](https://kbroman.org/simple_site).
-
----
-
-To the extent possible under law,
-[Karl Broman](https://github.com/kbroman)
-has waived all copyright and related or neighboring rights to
-&ldquo;[simple site](https://github.com/kbroman/simple_site)&rdquo;.
-This work is published from the United States.
-<br/>
-[![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure Windows system flexible base-level (ATCG) quality control and convenient high-level whole-process analysis of fastq data-- spanning quality control report, trimming bases and reads accordingly, alignment and feature count. Till now, words still prevail that Fastq data cannot be elegantly processed in Windows. However, the fundamental low-level R package [ShortRead](https://bioconductor.org/packages/ShortRead/) and [Rsubread](https://bioconductor.org/packages/Rsubread/) has been available for long, based on which SeqWins is build up as complementary to other useful R packages, like [QuasR](https://bioconductor.org/packages/QuasR/) etc. Hope you'd find SeqWins useful and saving you from struggling for days to set up system environment and try various tools seemingly compatible with you daily Windows work station like I did when carrying out relevant tasks.
