@@ -1,8 +1,12 @@
 
 SeqWins Vignette
 =============================
+
+### Description
+
 An R package allowing flexible base trimming and complete Fastq analysis on Windows System
-----------------------------------------------------------------------------------------------
+
+***
 
 ### Installation
 
@@ -19,8 +23,7 @@ devtools::install_github("jliu678/SeqWins")
 library(SeqWins)
 ```
 
-
-
+***
 
 ### Introduction
 
@@ -39,6 +42,8 @@ SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure 
   + Filter reads
   + RNAseq
   + Quality control
+  
+***
 
 ### Prepare genomic Fastq sequence and the corresonding GTF annotation
 
@@ -50,6 +55,8 @@ If necessary untar the downloaded files as blow
 untar("full/path/genome_assemblies_genome_fasta.tar",exdir = ".")
 untar("full/path/genome_assemblies_genome_gtf.tar",exdir = ".")
 ```
+
+***
 
 ### QC report
 
@@ -71,6 +78,7 @@ the above will generate report of the fastq files retrieved by
 list.files(path = "full/path/FastqFolder",pattern = "fastq.gz")
 ```
 
+***
 
 ### Trim bases,filter reads,align and count feature
 
@@ -175,7 +183,7 @@ seqW(fileList1=fl,alignType ='microRNA')#microRNAseq
 ```
 
 
-
+***
 ### Even more flexibility is faciliated!
 
 Hope the package can realize easy but deep appreciation of your fastq data, and you probably have found every parameters you wanna touch through above introduction. But there is even more! `...` arguments enable `seqW` function to access all the arguments in the classic functions wrapped inside it, including 
