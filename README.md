@@ -4,7 +4,7 @@ SeqWins Vignette
 
 ### Description
 
-An R package allowing flexible base trimming and complete Fastq analysis on Windows System
+**An R package allowing flexible base trimming and complete Fastq analysis on Windows System**
 
 
 
@@ -40,7 +40,7 @@ SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure 
   + Trim base quality
   + Filter reads
   + RNAseq
-  + Quality control
+  + Quality control report
   
 ***
 
@@ -55,7 +55,6 @@ untar("full/path/genome_assemblies_genome_fasta.tar",exdir = ".")
 untar("full/path/genome_assemblies_genome_gtf.tar",exdir = ".")
 ```
 
-***
 
 ### QC report
 
