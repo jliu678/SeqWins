@@ -6,7 +6,7 @@ SeqWins Vignette
 
 An R package allowing flexible base trimming and complete Fastq analysis on Windows System
 
-***
+
 
 ### Installation
 
@@ -30,7 +30,6 @@ library(SeqWins)
 SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure Windows system flexible base-level (ATCG) quality control and convenient high-level whole-process analysis of fastq data-- spanning quality control report, trimming bases and reads accordingly, alignment and feature count. Till now, words still prevail that Fastq data cannot be elegantly processed in Windows. However, the fundamental low-level R package [ShortRead](https://bioconductor.org/packages/ShortRead/) and [Rsubread](https://bioconductor.org/packages/Rsubread/) has been available for long, based on which SeqWins is build up as complementary to other useful R packages, like [QuasR](https://bioconductor.org/packages/QuasR/) etc. Hope you'd find SeqWins useful and saving you from struggling for days to set up system environment and try various tools seemingly compatible with you daily Windows work station like I did when carrying out relevant tasks.
 
 
-***
 
 ### Keywords
 
