@@ -38,6 +38,7 @@ SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure 
   + Filter reads
   + RNAseq
   + Quality control
+  + [github SeqWins](https://github.com/jliu678/SeqWins)
 
 ***
 
