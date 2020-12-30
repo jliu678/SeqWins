@@ -30,7 +30,7 @@ SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure 
 
 ### Keywords
 
-  + SeqWins
+  + [SeqWins](https://jliu678.github.io/SeqWins/index.html)
   + Fastq
   + Windows system
   + R
