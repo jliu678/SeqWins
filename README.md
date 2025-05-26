@@ -1,7 +1,7 @@
 
 SeqWins Vignette
 =============================
-An R package allowing flexible base trimming and complete Fastq analysis on Windows System
+An R package allowing flexible base trimming and complete Fastq analysis on Windows System as fast and memory-efficient as linux 
 
 > 💡 **Tip: [Please find **👉 MY BLOG** for an introduction and complete view of the project behind the code in this repository.](https://myhugoblog)**
 
