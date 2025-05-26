@@ -1,7 +1,9 @@
 
 SeqWins Vignette
 =============================
-> An R package allowing flexible base trimming and complete Fastq analysis on Windows System
+An R package allowing flexible base trimming and complete Fastq analysis on Windows System
+
+> 💡 **Tip: [Please find **👉 MY BLOG** for an introduction and complete view of the project behind the code in this repository.](https://myhugoblog)**
 
 ### Contributors
 
@@ -17,7 +19,30 @@ SeqWins Vignette
   </tr>
 </table>
 
+### Introduction
 
+Words prevail that Fastq data cannot be elegantly processed in Windows. However, the fundamental low-level R package ShortRead and Rsubread have been available to provide memory-efficient, chunk-wise processing of FASTQ files and offer alignment performance that is competitive with or faster than many Linux-based aligners. Building on these strengths, I developed SeqWins (fastq **Seq**uence analysis on **Win**dows system), an R package for flexible base trimming and comprehensive FASTQ analysis on Windows. It achieves on **pure Windows system**:
+ - memory-efficient, chunk-wise processing of FASTQ files
+ - alignment performance competitive with or faster than many Linux-based aligners
+ - flexible base-level (ATCG) quality control and trimming
+ - convenient high-level whole-process analysis of fastq data-- spanning quality control report, trimming bases and reads accordingly, alignment and feature count
+
+
+
+### Keywords
+
+  + [SeqWins](https://myhugoblog)
+  + Fastq
+  + Windows system
+  + R
+  + Trim base quality
+  + Filter reads
+  + RNAseq
+  + Quality control report
+  + DNAseq
+  + CHIPseq
+  
+***
 
 
 ### Installation
@@ -37,26 +62,7 @@ library(SeqWins)
 
 ***
 
-### Introduction
 
-SeqWins (fastq **Seq**uence analysis on **Win**dows system) can achieve on pure Windows system flexible base-level (ATCG) quality control and convenient high-level whole-process analysis of fastq data-- spanning quality control report, trimming bases and reads accordingly, alignment and feature count. Till now, words still prevail that Fastq data cannot be elegantly processed in Windows. However, the fundamental low-level R package [ShortRead](https://bioconductor.org/packages/ShortRead/) and [Rsubread](https://bioconductor.org/packages/Rsubread/) has been available for long, based on which SeqWins is build up as complementary to other useful R packages, like [QuasR](https://bioconductor.org/packages/QuasR/) etc. Hope you'd find SeqWins useful and saving you from struggling for days to set up system environment and try various tools seemingly compatible with you daily Windows work station like I did when carrying out relevant tasks.
-
-
-
-### Keywords
-
-  + [SeqWins](https://jliu678.github.io/SeqWins/index.html)
-  + Fastq
-  + Windows system
-  + R
-  + Trim base quality
-  + Filter reads
-  + RNAseq
-  + Quality control report
-  + DNAseq
-  + CHIPseq
-  
-***
 
 ### Prepare genomic Fastq sequence and the corresonding GTF annotation
 
