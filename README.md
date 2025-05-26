@@ -3,11 +3,17 @@ SeqWins Vignette
 =============================
 > An R package allowing flexible base trimming and complete Fastq analysis on Windows System
 
-### 🙌 Contributors
+### Contributors
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/jliu678"><img src="https://avatars.githubusercontent.com/u/53794392?v=4" width="100px;" alt="jliu678"/><br /><sub><b>jliu678</b></sub></a></td>
+    <td align="center">
+      <a href="https://github.com/jliu678">
+        <img src="https://avatars.githubusercontent.com/u/53794392?v=4" width="50px;" alt="jliu678"/><br />
+        <sub><b>jliu678</b></sub>
+      </a>
+      <br />🙌😎🔬👨‍💻
+    </td>
   </tr>
 </table>
 
