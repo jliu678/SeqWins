@@ -254,6 +254,4 @@ simply `?trimEnds` for example, to see their function and how to use it as brick
 
 The above steps are carried out by `Rsubread::buildindex`, `TrimAndFilter`, `Rsubread::align` or its variant and `Rsubread::featureCounts`, respectively. We have earlier discussed how to use `seqW` funciton avoid repeating generation of index files when there are already index files. Besides, if satisfactory trimmed fastq exist, simply sequentially call necessary functions listed above to achieve your goal, e.g. building index by `Rsubread::buildindex` then aligning and count features by  `Rsubread::align` and `Rsubread::featureCounts`. If you even have aligned bam, just run `Rsubread::buildindex` and `Rsubread::featureCounts`. If you have got feature counts at hand, well, thank you a lot for using or visiting this package.  
 
-Also see [html vignetts](https://jliu678.github.io/SeqWins/)
-
 
