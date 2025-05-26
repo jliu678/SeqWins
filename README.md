@@ -3,7 +3,13 @@ SeqWins Vignette
 =============================
 > An R package allowing flexible base trimming and complete Fastq analysis on Windows System
 
+## 🔖 Project Info
 
+![Contributors](https://img.shields.io/github/contributors/jliu678/SeqWins.svg)
+![Forks](https://img.shields.io/github/forks/jliu678/SeqWins.svg)
+![Stars](https://img.shields.io/github/stars/jliu678/SeqWins.svg)
+![License](https://img.shields.io/github/license/jliu678/SeqWins.svg)
+![Last Commit](https://img.shields.io/github/last-commit/jliu678/SeqWins.svg)
 
 ### Installation
 
